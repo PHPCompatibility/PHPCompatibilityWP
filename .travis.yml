@@ -1,0 +1,47 @@
+sudo: false
+
+dist: trusty
+
+cache:
+  apt: true
+
+language: php
+
+## Cache composer downloads.
+cache:
+  directories:
+    # Cache directory for older Composer versions.
+    - $HOME/.composer/cache/files
+    # Cache directory for more recent Composer versions.
+    - $HOME/.cache/composer/files
+
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.2
+      addons:
+        apt:
+          packages:
+            - libxml2-utils
+    - php: 5.4
+
+before_install:
+  # Speed up build time by disabling Xdebug when its not needed.
+  - if [[ $COVERALLS_VERSION == "notset" ]]; then phpenv config-rm xdebug.ini || echo 'No xdebug config.'; fi
+  - export XMLLINT_INDENT="    "
+  - composer install
+
+script:
+  - |
+    if [[ $TRAVIS_PHP_VERSION == "7.2" ]]; then
+      # Validate the xml file.
+      # @link http://xmlsoft.org/xmllint.html
+      xmllint --noout ./PHPCompatibilityWP/ruleset.xml
+
+      # Check the code-style consistency of the xml file.
+      diff -B ./PHPCompatibilityWP/ruleset.xml <(xmllint --format "./PHPCompatibilityWP/ruleset.xml")
+    fi
+
+  # Validate the composer.json file.
+  # @link https://getcomposer.org/doc/03-cli.md#validate
+  - composer validate --no-check-all --with-dependencies --strict

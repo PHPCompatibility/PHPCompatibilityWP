@@ -1,0 +1,28 @@
+{
+  "name" : "phpcompatibility/phpcompatibility-wp",
+  "description" : "A set of sniffs for PHP_CodeSniffer that checks for PHP version compatibility for WordPress projects.",
+  "type" : "phpcodesniffer-standard",
+  "keywords" : [ "compatibility", "phpcs", "standards", "wordpress" ],
+  "homepage" : "http://phpcompatibility.com/",
+  "license" : "LGPL-3.0-or-later",
+  "authors" : [ {
+    "name" : "Wim Godden",
+    "role" : "lead"
+  },
+  {
+    "name" : "Juliette Reinders Folmer",
+    "role" : "lead"
+  } ],
+  "support" : {
+    "issues" : "https://github.com/PHPCompatibility/PHPCompatibilityWP/issues",
+    "source" : "https://github.com/PHPCompatibility/PHPCompatibilityWP"
+  },
+  "require" : {
+    "phpcompatibility/php-compatibility" : "*"
+  },
+  "suggest" : {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically.",
+    "roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
+  },
+  "prefer-stable" : true
+}
