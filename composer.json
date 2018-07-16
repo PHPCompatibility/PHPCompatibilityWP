@@ -18,7 +18,7 @@
     "source" : "https://github.com/PHPCompatibility/PHPCompatibilityWP"
   },
   "require" : {
-    "phpcompatibility/php-compatibility" : "*"
+    "phpcompatibility/php-compatibility" : "^8.1"
   },
   "suggest" : {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically.",
