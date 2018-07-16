@@ -44,4 +44,4 @@ script:
 
   # Validate the composer.json file.
   # @link https://getcomposer.org/doc/03-cli.md#validate
-  - composer validate --no-check-all --with-dependencies --strict
+  - composer validate --no-check-all --strict
