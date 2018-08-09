@@ -15,7 +15,7 @@ cache:
 matrix:
   fast_finish: true
   include:
-    - php: 7.2
+    - php: 7.3
       addons:
         apt:
           packages:
@@ -24,14 +24,14 @@ matrix:
 
 before_install:
   # Speed up build time by disabling Xdebug when its not needed.
-  - if [[ $COVERALLS_VERSION == "notset" ]]; then phpenv config-rm xdebug.ini || echo 'No xdebug config.'; fi
+  - phpenv config-rm xdebug.ini || echo 'No xdebug config.'
   - export XMLLINT_INDENT="    "
   - composer install
   - vendor/bin/phpcs -i
 
 script:
   - |
-    if [[ $TRAVIS_PHP_VERSION == "7.2" ]]; then
+    if [[ $TRAVIS_PHP_VERSION == "7.3" ]]; then
       # Validate the xml file.
       # @link http://xmlsoft.org/xmllint.html
       xmllint --noout ./PHPCompatibilityWP/ruleset.xml
