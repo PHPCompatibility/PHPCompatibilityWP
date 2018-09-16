@@ -1,7 +1,7 @@
 [![Latest Stable Version](https://poser.pugx.org/PHPCompatibility/phpcompatibility-wp/v/stable.png)](https://packagist.org/packages/PHPCompatibility/phpcompatibility-wp)
 [![Latest Unstable Version](https://poser.pugx.org/PHPCompatibility/phpcompatibility-wp/v/unstable.png)](https://packagist.org/packages/PHPCompatibility/phpcompatibility-wp)
 [![License](https://poser.pugx.org/PHPCompatibility/phpcompatibility-wp/license.png)](https://github.com/PHPCompatibility/PHPCompatibilityWP/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/PHPCompatibility/PHPCompatibilityWP.png?branch=master)](https://travis-ci.org/PHPCompatibility/PHPCompatibilityWP)
+[![Build Status](https://travis-ci.org/PHPCompatibility/PHPCompatibilityWP.svg?branch=master)](https://travis-ci.org/PHPCompatibility/PHPCompatibilityWP)
 
 # PHPCompatibilityWP
 
