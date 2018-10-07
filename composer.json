@@ -1,6 +1,6 @@
 {
   "name" : "phpcompatibility/phpcompatibility-wp",
-  "description" : "A set of sniffs for PHP_CodeSniffer that checks for PHP version compatibility for WordPress projects.",
+  "description" : "A ruleset for PHP_CodeSniffer to check for PHP cross-version compatibility issues in projects, while accounting for polyfills provided by WordPress.",
   "type" : "phpcodesniffer-standard",
   "keywords" : [ "compatibility", "phpcs", "standards", "wordpress" ],
   "homepage" : "http://phpcompatibility.com/",
@@ -18,10 +18,14 @@
     "source" : "https://github.com/PHPCompatibility/PHPCompatibilityWP"
   },
   "require" : {
-    "phpcompatibility/php-compatibility" : "^8.1"
+    "phpcompatibility/php-compatibility" : "^9.0",
+    "phpcompatibility/phpcompatibility-paragonie" : "^1.0"
+  },
+  "require-dev" : {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
   },
   "suggest" : {
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically.",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3 || This Composer plugin will sort out the PHP_CodeSniffer 'installed_paths' automatically.",
     "roave/security-advisories": "dev-master || Helps prevent installing dependencies with known security issues."
   },
   "prefer-stable" : true
