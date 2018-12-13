@@ -86,6 +86,15 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 ## Changelog
 
+### 2.1.0 - 2019-08-29
+
+- Ruleset: Updated for the Sodium_Compat polyfill which is included in WordPress 5.2.
+- Composer: The recommended version of the [Composer PHPCS plugin](https://github.com/Dealerdirect/phpcodesniffer-composer-installer/) has been upped to `^0.5.0`.
+- Documentation: Updated the ruleset inline documentation and the Readme to reflect the change in minimum PHP requirements for WordPress as of WP 5.2.
+- Documentation: Updated the ruleset inline documentation to include information on when each polyfill was added to/removed from WordPress.
+- CI: The rulesets are now also tested against PHP 7.3.
+    Note: full PHP 7.3 support is only available in combination with PHP_CodeSniffer 2.9.2 or 3.3.1+ due to an incompatibility within PHP_CodeSniffer itself.
+
 ### 2.0.0 - 2018-10-07
 
 - Ruleset: Updated for compatibility with PHPCompatibility 9.0+.
