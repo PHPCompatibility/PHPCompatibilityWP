@@ -3,9 +3,9 @@
     <description>WordPress specific ruleset which checks for PHP cross version compatibility.</description>
 
     <!--
-    The WordPress minimum PHP requirement is PHP 5.2.4.
+    The WordPress minimum PHP requirement is PHP 5.6.
     Add the following in your project PHP_CodeSniffer ruleset to enforce this:
-    <config name="testVersion" value="5.2-"/>
+    <config name="testVersion" value="5.6-"/>
 
     This directive is not included in this ruleset as individual projects may use
     a different (higher) minimum PHP version.
