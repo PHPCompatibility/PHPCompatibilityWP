@@ -4,7 +4,7 @@
 
     <!--
     The WordPress minimum PHP requirement was 5.2.4 up to WP 5.1.
-    As of WP 5.2, the new minimum PHP requirement is PHP 5.6.
+    As of WP 5.2, the new minimum PHP requirement is PHP 5.6.20.
     Add the following in your project PHP_CodeSniffer ruleset to enforce this:
     <config name="testVersion" value="5.6-"/>
 
