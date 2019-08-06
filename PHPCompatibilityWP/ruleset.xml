@@ -13,7 +13,20 @@
     -->
 
     <rule ref="PHPCompatibility">
-        <!-- Contained in /wp-includes/compat.php. -->
+        <!--
+        Contained in /wp-includes/compat.php.
+
+        History of the polyfills in WP:
+        * hash_hmac(): since WP 3.2.0.
+        * json_encode() and json_decode(): since unknown.
+        * hash_equals(): since WP 3.9.2.
+        * JSON_PRETTY_PRINT: since WP 4.1.0.
+        * json_last_error_msg(): since WP 4.4.0.
+        * JsonSerializable: since WP 4.4.0.
+        * array_replace_recursive(): since WP 4.5.3 up to 5.2.x. The polyfill was removed in WP 5.3.
+        * is_iterable(): since WP 4.9.6
+        * is_countable(): since WP 4.9.6
+        -->
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.hash_hmacFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.json_encodeFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.json_decodeFound"/>
@@ -25,7 +38,13 @@
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.is_iterableFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.is_countableFound"/>
 
-        <!-- Contained in /wp-includes/spl-autoload-compat.php. -->
+        <!--
+        Contained in /wp-includes/spl-autoload-compat.php.
+
+        History of the polyfills in WP:
+        * spl_autoload_register(), spl_autoload_unregister() and spl_autoload_functions() were
+          introduced in WP 4.6.0 and available up to WP 5.2.x. The polyfills were removed in WP 5.3.
+        -->
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.spl_autoload_registerFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.spl_autoload_unregisterFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.spl_autoload_functionsFound"/>
