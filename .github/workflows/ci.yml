@@ -67,7 +67,7 @@ jobs:
 
         include:
           - php: '7.4'
-            phpcompat: 'dev-develop as 9.99.99'
+            phpcompat: 'dev-develop as 10.99.99'
             experimental: true
 
     name: "Test: PHP ${{ matrix.php }} - PHPCompat ${{ matrix.phpcompat }}"
@@ -102,4 +102,7 @@ jobs:
 
       # Make sure that known polyfills don't trigger any errors.
       - name: Test the ruleset
-        run: vendor/bin/phpcs -ps ./Test/WPTest.php --standard=PHPCompatibilityWP --runtime-set testVersion 5.2-
+        run: >
+          vendor/bin/phpcs -ps ./Test/WPTest.php --standard=PHPCompatibilityWP
+          --exclude=PHPCompatibility.Upgrade.LowPHP
+          --runtime-set testVersion 5.2-
