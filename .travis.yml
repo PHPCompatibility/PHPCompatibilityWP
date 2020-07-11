@@ -14,22 +14,35 @@ matrix:
   fast_finish: true
   include:
     - php: 7.4
+      env: LINT=1
       addons:
         apt:
           packages:
             - libxml2-utils
     - php: 5.4
 
+    - php: 7.4
+      env: PHPCOMPAT="dev-develop as 9.99.99"
+
+  allow_failures:
+    # Allow failures for unstable builds.
+    - env: PHPCOMPAT="dev-develop as 9.99.99"
+
 before_install:
   # Speed up build time by disabling Xdebug when its not needed.
   - phpenv config-rm xdebug.ini || echo 'No xdebug config.'
   - export XMLLINT_INDENT="    "
+  - |
+    if [[ $PHPCOMPAT ]]; then
+      composer config minimum-stability dev
+      composer require --no-update phpcompatibility/php-compatibility:"${PHPCOMPAT}"
+    fi
   - composer install
   - vendor/bin/phpcs -i
 
 script:
   - |
-    if [[ $TRAVIS_PHP_VERSION == "7.4" ]]; then
+    if [[ $LINT == "1" ]]; then
       # Validate the xml file.
       # @link http://xmlsoft.org/xmllint.html
       xmllint --noout ./PHPCompatibilityWP/ruleset.xml
