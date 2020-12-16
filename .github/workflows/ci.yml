@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  # Run on pushes to `master` and on all pull requests.
+  push:
+    branches:
+      - master
+  pull_request:
+  # Also run this workflow on day 15 of every month as the repo isn't that active.
+  schedule:
+    - cron: '0 0 15 * *'
+
+jobs:
+  xmllint:
+    name: 'Check XML'
+    runs-on: ubuntu-latest
+
+    env:
+      XMLLINT_INDENT: '    '
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          coverage: none
+
+      # Install dependencies to make sure the PHPCS XSD file is available.
+      - name: Install dependencies
+        run: composer install --no-dev --no-interaction --no-progress
+
+      - name: Setup xmllint
+        run: sudo apt-get install --no-install-recommends -y libxml2-utils
+
+      # Show violations inline in the file diff.
+      # @link https://github.com/marketplace/actions/xmllint-problem-matcher
+      - uses: korelstar/xmllint-problem-matcher@v1
+
+      # Validate the xml file.
+      # @link http://xmlsoft.org/xmllint.html
+      - name: Validate against schema
+        run: xmllint --noout --schema vendor/squizlabs/php_codesniffer/phpcs.xsd PHPCompatibilityWP/ruleset.xml
+
+      # Check the code-style consistency of the xml file.
+      - name: Check code style
+        run: diff -B ./PHPCompatibilityWP/ruleset.xml <(xmllint --format "./PHPCompatibilityWP/ruleset.xml")
+
+  test:
+    needs: xmllint
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php: ['5.4', 'latest']
+        phpcompat: ['stable']
+        experimental: [false]
+
+        include:
+          - php: '7.4'
+            phpcompat: 'dev-develop as 9.99.99'
+            experimental: true
+
+    name: "Test: PHP ${{ matrix.php }} - PHPCompat ${{ matrix.phpcompat }}"
+    continue-on-error: ${{ matrix.experimental }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+
+      - name: Conditionally update PHPCompatibility to develop version
+        if: ${{ matrix.phpcompat != 'stable' }}
+        run: |
+          composer config minimum-stability dev
+          composer require --no-update phpcompatibility/php-compatibility:"${{ matrix.phpcompat }}"
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress
+
+      # Validate the composer.json file.
+      # @link https://getcomposer.org/doc/03-cli.md#validate
+      - name: Validate Composer installation
+        run: composer validate --no-check-all --strict
+
+      # Make sure that known polyfills don't trigger any errors.
+      - name: Test the ruleset
+        run: vendor/bin/phpcs -ps ./Test/WPTest.php --standard=PHPCompatibilityWP --runtime-set testVersion 5.2-
