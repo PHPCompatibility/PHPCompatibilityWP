@@ -9,6 +9,8 @@ on:
   # Also run this workflow on day 15 of every month as the repo isn't that active.
   schedule:
     - cron: '0 0 15 * *'
+  # Allow manually triggering the workflow.
+  workflow_dispatch:
 
 jobs:
   xmllint:
