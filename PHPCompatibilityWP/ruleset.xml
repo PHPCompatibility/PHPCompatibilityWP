@@ -26,6 +26,7 @@
         * array_replace_recursive(): since WP 4.5.3 up to 5.2.x. The polyfill was removed in WP 5.3.
         * is_iterable(): since WP 4.9.6
         * is_countable(): since WP 4.9.6
+        * IMAGETYPE_WEBP and IMG_WEBP: since WP 5.8.0.
         -->
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.hash_hmacFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.json_encodeFound"/>
@@ -37,6 +38,8 @@
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_replace_recursiveFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.is_iterableFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.is_countableFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.imagetype_webpFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.img_webpFound"/>
 
         <!--
         Contained in /wp-includes/spl-autoload-compat.php.
