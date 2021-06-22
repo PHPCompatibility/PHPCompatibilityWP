@@ -24,3 +24,5 @@ $a = spl_autoload_unregister();
 $a = spl_autoload_functions();
 
 $a = mysql_to_rfc3339();
+
+echo IMAGETYPE_WEBP, IMG_WEBP;
