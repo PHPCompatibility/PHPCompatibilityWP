@@ -86,6 +86,11 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 ## Changelog
 
+### 2.1.2 - 2021-07-20
+
+- Ruleset: Updated for compatibility with WordPress 5.8.
+- Documentation: improved installation instructions. Props [Andy Fragen](https://github.com/afragen).
+
 ### 2.1.1 - 2021-02-15
 
 - The recommended version of the [Composer PHPCS plugin] is now `^0.7.0`, which offers compatibility with Composer 2.0.
