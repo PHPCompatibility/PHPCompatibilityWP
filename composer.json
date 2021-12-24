@@ -17,6 +17,11 @@
     "issues" : "https://github.com/PHPCompatibility/PHPCompatibilityWP/issues",
     "source" : "https://github.com/PHPCompatibility/PHPCompatibilityWP"
   },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
   "require" : {
     "phpcompatibility/php-compatibility" : "^9.0",
     "phpcompatibility/phpcompatibility-paragonie" : "^1.0"
