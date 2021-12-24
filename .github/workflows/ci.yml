@@ -83,7 +83,7 @@ jobs:
         if: ${{ matrix.phpcompat != 'stable' }}
         run: |
           composer config minimum-stability dev
-          composer require --no-update phpcompatibility/php-compatibility:"${{ matrix.phpcompat }}"
+          composer require --no-update phpcompatibility/php-compatibility:"${{ matrix.phpcompat }}" --no-interaction
 
       - name: Install dependencies
         run: composer install --no-interaction --no-progress
