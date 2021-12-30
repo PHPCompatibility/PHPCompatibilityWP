@@ -85,6 +85,12 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 ## Changelog
 
+### 2.1.3 - 2021-12-31
+
+- Ruleset: Updated for compatibility with WordPress 5.9.
+- README: Updated the installation instructions for compatibility with Composer >= 2.2.
+- Minor housekeeping.
+
 ### 2.1.2 - 2021-07-20
 
 - Ruleset: Updated for compatibility with WordPress 5.8.
