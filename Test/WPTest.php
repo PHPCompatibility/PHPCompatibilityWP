@@ -25,4 +25,11 @@ $a = spl_autoload_functions();
 
 $a = mysql_to_rfc3339();
 
+if (array_key_first($array)
+    || array_key_last($array)) {}
+
+$a = str_contains($haystack, $needle);
+$a = str_starts_with( $haystack, $needle );
+$a = str_ends_with( $haystack, $needle );
+
 echo IMAGETYPE_WEBP, IMG_WEBP;
