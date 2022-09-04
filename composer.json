@@ -2,7 +2,7 @@
   "name" : "phpcompatibility/phpcompatibility-wp",
   "description" : "A ruleset for PHP_CodeSniffer to check for PHP cross-version compatibility issues in projects, while accounting for polyfills provided by WordPress.",
   "type" : "phpcodesniffer-standard",
-  "keywords" : [ "compatibility", "phpcs", "standards", "wordpress" ],
+  "keywords" : [ "compatibility", "phpcs", "standards", "static analysis", "wordpress" ],
   "homepage" : "http://phpcompatibility.com/",
   "license" : "LGPL-3.0-or-later",
   "authors" : [ {
