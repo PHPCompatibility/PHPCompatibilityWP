@@ -41,7 +41,7 @@ jobs:
 
       # Show violations inline in the file diff.
       # @link https://github.com/marketplace/actions/xmllint-problem-matcher
-      - uses: korelstar/xmllint-problem-matcher@v1
+      - uses: korelstar/xmllint-problem-matcher@v1.1
 
       # Validate the xml file.
       # @link http://xmlsoft.org/xmllint.html
