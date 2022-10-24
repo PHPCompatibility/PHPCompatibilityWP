@@ -85,13 +85,20 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 ## Changelog
 
+### 2.1.4 - 2022-10-24
+
+- Composer: The package will now identify itself as a static analysis tool. Thanks [@GaryJones]!
+- Other housekeeping and minor documentation updates.
+
 ### 2.1.3 - 2021-12-31
 
 - Ruleset: Updated for compatibility with WordPress 5.9.
-- README: Updated the installation instructions for compatibility with Composer >= 2.2.
+- README: Updated the installation instructions for [compatibility with Composer >= 2.2][composer22announce].
 - Minor housekeeping.
 
-### 2.1.2 - 2021-07-20
+[composer22announce]: https://blog.packagist.com/composer-2-2/#more-secure-plugin-execution
+
+### 2.1.2 - 2021-07-21
 
 - Ruleset: Updated for compatibility with WordPress 5.8.
 - Documentation: improved installation instructions. Props [Andy Fragen](https://github.com/afragen).
@@ -123,4 +130,6 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 Initial release of the PHPCompatibilityWP ruleset.
 
-[Composer PHPCS plugin]: https://github.com/Dealerdirect/phpcodesniffer-composer-installer/
+[Composer PHPCS plugin]: https://github.com/PHPCSStandards/composer-installer/
+
+[@GaryJones]: https://github.com/GaryJones
