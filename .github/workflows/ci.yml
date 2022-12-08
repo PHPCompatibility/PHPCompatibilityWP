@@ -27,7 +27,7 @@ jobs:
       - name: Install PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.4'
+          php-version: 'latest'
           coverage: none
 
       # Install dependencies to make sure the PHPCS XSD file is available.
