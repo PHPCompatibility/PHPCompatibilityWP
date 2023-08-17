@@ -67,9 +67,8 @@
     <!--
     The ParagonieSodiumCompat ruleset includes the ParagonieRandomCompat ruleset.
 
-    RancomCompat is contained in /wp-includes/random_compat/ since WP 4.4.0
+    RandomCompat is contained in /wp-includes/random_compat/ since WP 4.4.0 and removed in WP 6.3.0
     SodiumCompat is contained in /wp-includes/sodium_compat/ since WP 5.2.0
-    The polyfill was removed in WP 6.3.
     -->
     <rule ref="PHPCompatibilityParagonieSodiumCompat"/>
 
