@@ -85,6 +85,12 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 ## Changelog
 
+### 2.1.5 - 2024-04-25
+
+- Ruleset: Updated for compatibility with WordPress 6.5. Thanks [@swissspidy]
+- The recommended version of the [Composer PHPCS plugin] is now `^1.0`.
+- Other housekeeping and documentation updates. Includes contributions from [@fredden] and [@johnbillion].
+
 ### 2.1.4 - 2022-10-24
 
 - Composer: The package will now identify itself as a static analysis tool. Thanks [@GaryJones]!
@@ -132,4 +138,7 @@ Initial release of the PHPCompatibilityWP ruleset.
 
 [Composer PHPCS plugin]: https://github.com/PHPCSStandards/composer-installer/
 
-[@GaryJones]: https://github.com/GaryJones
+[@fredden]:     https://github.com/fredden
+[@GaryJones]:   https://github.com/GaryJones
+[@johnbillion]: https://github.com/johnbillion
+[@swissspidy]:  https://github.com/swissspidy
