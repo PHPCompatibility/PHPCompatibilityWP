@@ -15,7 +15,8 @@
   } ],
   "support" : {
     "issues" : "https://github.com/PHPCompatibility/PHPCompatibilityWP/issues",
-    "source" : "https://github.com/PHPCompatibility/PHPCompatibilityWP"
+    "source" : "https://github.com/PHPCompatibility/PHPCompatibilityWP",
+    "security": "https://github.com/PHPCompatibility/PHPCompatibilityWP/security/policy"
   },
   "config": {
     "allow-plugins": {
