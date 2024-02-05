@@ -33,3 +33,5 @@ $a = str_starts_with( $haystack, $needle );
 $a = str_ends_with( $haystack, $needle );
 
 echo IMAGETYPE_WEBP, IMG_WEBP;
+
+if (array_is_list($array)) {}

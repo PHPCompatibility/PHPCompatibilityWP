@@ -33,6 +33,7 @@
         * str_contains(): since WP 5.9.0
         * str_starts_with(): since WP 5.9.0
         * str_ends_with(): since WP 5.9.0
+        * array_is_list(): since WP 6.5.0
         -->
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.hash_hmacFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.json_encodeFound"/>
@@ -51,6 +52,7 @@
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.str_containsFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.str_starts_withFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.str_ends_withFound"/>
+        <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_is_listFound"/>
 
         <!--
         Contained in /wp-includes/spl-autoload-compat.php.
