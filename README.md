@@ -1,7 +1,7 @@
-[![Latest Stable Version](https://poser.pugx.org/phpcompatibility/phpcompatibility-wp/v/stable.png)](https://packagist.org/packages/phpcompatibility/phpcompatibility-wp)
-[![Latest Unstable Version](https://poser.pugx.org/phpcompatibility/phpcompatibility-wp/v/unstable.png)](https://packagist.org/packages/phpcompatibility/phpcompatibility-wp)
-[![License](https://poser.pugx.org/phpcompatibility/phpcompatibility-wp/license.png)](https://github.com/PHPCompatibility/PHPCompatibilityWP/blob/master/LICENSE)
-[![Build Status](https://github.com/PHPCompatibility/PHPCompatibilityWP/workflows/CI/badge.svg?branch=master)](https://github.com/PHPCompatibility/PHPCompatibilityWP/actions)
+[![Latest Stable Version](https://img.shields.io/packagist/v/phpcompatibility/phpcompatibility-wp?label=stable)](https://packagist.org/packages/phpcompatibility/phpcompatibility-wp)
+[![Latest Unstable Version](https://img.shields.io/badge/unstable-dev--develop-e68718.svg?maxAge=2419200)](https://packagist.org/packages/phpcompatibility/phpcompatibility-wp)
+[![License](https://img.shields.io/github/license/PHPCompatibility/PHPCompatibilityWP?color=00a7a7)](https://github.com/PHPCompatibility/PHPCompatibilityWP/blob/master/LICENSE)
+[![Build Status](https://github.com/PHPCompatibility/PHPCompatibilityWP/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/PHPCompatibility/PHPCompatibilityWP/actions/workflows/ci.yml)
 
 # PHPCompatibilityWP
 
