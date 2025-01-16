@@ -85,6 +85,11 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 ## Changelog
 
+### 2.1.6 - 2025-01-16
+
+- README: Fixed some broken badges.
+- General housekeeping and documentation updates. Including a contribution by [@johnbillion].
+
 ### 2.1.5 - 2024-04-25
 
 - Ruleset: Updated for compatibility with WordPress 6.5. Thanks [@swissspidy]
