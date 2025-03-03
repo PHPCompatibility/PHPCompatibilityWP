@@ -34,27 +34,14 @@ jobs:
       - name: Install dependencies
         run: composer install --no-dev --no-interaction --no-progress
 
-      # Updating the lists can fail intermittently, typically after Microsoft has released a new package.
-      # This should not be blocking for this job, so ignore any errors from this step.
-      # Ref: https://github.com/dotnet/core/issues/4167
-      - name: Update the available packages list
-        continue-on-error: true
-        run: sudo apt-get update
-
-      - name: Install xmllint
-        run: sudo apt-get install --no-install-recommends -y libxml2-utils
-
-      # Show violations inline in the file diff.
-      # @link https://github.com/marketplace/actions/xmllint-problem-matcher
-      - name: Enable showing XML issues inline
-        uses: korelstar/xmllint-problem-matcher@v1
-
-      # Validate the xml file.
-      # @link http://xmlsoft.org/xmllint.html
-      - name: Validate against schema
-        run: xmllint --noout --schema vendor/squizlabs/php_codesniffer/phpcs.xsd PHPCompatibilityWP/ruleset.xml
+      - name: Validate Ruleset XML file against schema
+        uses: phpcsstandards/xmllint-validate@v1
+        with:
+          pattern: "./*/ruleset.xml"
+          xsd-file: "vendor/squizlabs/php_codesniffer/phpcs.xsd"
 
       # Check the code-style consistency of the xml file.
+      # Note: this needs xmllint, but that will be installed via the phpcsstandards/xmllint-validate action runner.
       - name: Check code style
         run: diff -B ./PHPCompatibilityWP/ruleset.xml <(xmllint --format "./PHPCompatibilityWP/ruleset.xml")
 
