@@ -86,7 +86,7 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 ### 2.1.7 - 2025-05-12
 
 - Composer: The minimum supported version of PHP_CodeSniffer has been raised to 3.3.0.
-- Ruleset: Updated for compatibility with PHP_CodeSniffer 4.0+.
+- Ruleset: Prevent deprecation notice on PHP_CodeSniffer 3.13.0+.
 
 ### 2.1.6 - 2025-01-16
 
