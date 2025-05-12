@@ -25,6 +25,7 @@
     "lock": false
   },
   "require" : {
+    "squizlabs/php_codesniffer" : "^3.3",
     "phpcompatibility/php-compatibility" : "^9.0",
     "phpcompatibility/phpcompatibility-paragonie" : "^1.0"
   },

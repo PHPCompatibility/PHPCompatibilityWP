@@ -79,7 +79,9 @@
     <rule ref="PHPCompatibility.Extensions.RemovedExtensions">
         <properties>
             <!-- Contained in /wp-includes/functions.php. -->
-            <property name="functionWhitelist" type="array" value="mysql_to_rfc3339"/>
+            <property name="functionWhitelist" type="array">
+                <element value="mysql_to_rfc3339"/>
+            </property>
         </properties>
     </rule>
 

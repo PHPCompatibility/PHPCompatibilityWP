@@ -18,11 +18,9 @@ This WordPress specific ruleset prevents false positives from the [PHPCompatibil
 ## Requirements
 
 * [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer).
-    * PHP 5.3+ for use with [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer) 2.3.0+.
-    * PHP 5.4+ for use with [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer) 3.0.2+.
+    * PHP 5.4+ for use with [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer) 3.3.0+.
 
     Use the latest stable release of PHP_CodeSniffer for the best results.
-    The minimum _recommended_ version of PHP_CodeSniffer is version 2.6.0.
 * [PHPCompatibility](https://github.com/PHPCompatibility/PHPCompatibility) 9.0.0+.
 * [PHPCompatibilityParagonie](https://github.com/PHPCompatibility/PHPCompatibilityParagonie) 1.0.0+.
 
@@ -34,7 +32,7 @@ The only supported installation method is via [Composer](https://getcomposer.org
 If you don't have a Composer plugin installed to manage the `installed_paths` setting for PHP_CodeSniffer, run the following from the command-line:
 ```bash
 composer config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-composer require --dev dealerdirect/phpcodesniffer-composer-installer:"^0.7" phpcompatibility/phpcompatibility-wp:"*"
+composer require --dev dealerdirect/phpcodesniffer-composer-installer:"^1.0" phpcompatibility/phpcompatibility-wp:"*"
 ```
 
 If you already have a Composer PHP_CodeSniffer plugin installed, run:
@@ -84,6 +82,11 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 
 ## Changelog
+
+### 2.1.7 - 2025-05-12
+
+- Composer: The minimum supported version of PHP_CodeSniffer has been raised to 3.3.0.
+- Ruleset: Updated for compatibility with PHP_CodeSniffer 4.0+.
 
 ### 2.1.6 - 2025-01-16
 
