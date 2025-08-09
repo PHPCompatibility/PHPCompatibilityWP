@@ -1,3 +1,8 @@
+---
+name: Generic issue
+about: Use this template for all issues.
+---
+
 <!--
 This repository is only for the WordPress PHPCompatibility ruleset, which prevents false positives from the PHPCompatibility standard by excluding back-fills and poly-fills which are included by WordPress.
 
