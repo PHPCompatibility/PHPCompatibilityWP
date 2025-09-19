@@ -14,8 +14,6 @@ updates:
       prefix: "GH Actions:"
     labels:
       - "chores/QA"
-    cooldown:
-      semver-major-days: 10
     groups:
       action-runners:
         applies-to: version-updates
