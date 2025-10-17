@@ -83,6 +83,13 @@ All code within the PHPCompatibility organisation is released under the GNU Less
 
 ## Changelog
 
+### 2.1.8 - 2025-10-18
+
+This is a maintenance release.
+
+* The ruleset now includes schema tags.
+* General housekeeping and maintenance.
+
 ### 2.1.7 - 2025-05-12
 
 * Composer: The minimum supported version of PHP_CodeSniffer has been raised to 3.3.0.
