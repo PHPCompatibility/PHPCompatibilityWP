@@ -1,7 +1,7 @@
 # PHPCompatibilityWP
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/phpcompatibility/phpcompatibility-wp?label=stable)][packagist]
-[![Latest Unstable Version](https://img.shields.io/badge/unstable-dev--develop-e68718.svg?maxAge=2419200)][packagist]
+[![Latest Unstable Version](https://img.shields.io/packagist/v/phpcompatibility/phpcompatibility-wp?include_prereleases&label=pre-release)][packagist]
 [![License](https://img.shields.io/github/license/PHPCompatibility/PHPCompatibilityWP?color=00a7a7)](https://github.com/PHPCompatibility/PHPCompatibilityWP/blob/master/LICENSE)
 [![Build Status](https://github.com/PHPCompatibility/PHPCompatibilityWP/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/PHPCompatibility/PHPCompatibilityWP/actions/workflows/ci.yml)
 
