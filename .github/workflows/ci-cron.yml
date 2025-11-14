@@ -1,0 +1,15 @@
+name: CI Cronjob
+
+on:
+  # Run this workflow on day 15 of every month as the repo isn't that active.
+  schedule:
+    - cron: '0 0 15 * *'
+
+permissions: {}
+
+jobs:
+  QA:
+    # Don't run the cron job on forks.
+    if: ${{ github.event.repository.fork == false }}
+
+    uses: ./.github/workflows/reusable-qa-checks.yml
