@@ -20,16 +20,16 @@
         Contained in /wp-includes/compat.php.
 
         History of the polyfills in WP:
-        * hash_hmac(): since WP 3.2.0.
-        * json_encode() and json_decode(): since unknown.
-        * hash_equals(): since WP 3.9.2.
-        * JSON_PRETTY_PRINT: since WP 4.1.0.
-        * json_last_error_msg(): since WP 4.4.0.
-        * JsonSerializable: since WP 4.4.0.
+        * hash_hmac(): since WP 3.2.0 and removed since WP 6.8.0.
+        * json_encode() and json_decode(): since unknown and removed since WP 5.3.0.
+        * hash_equals(): since WP 3.9.2 and removed since WP 6.8.0.
+        * JSON_PRETTY_PRINT: since WP 4.1.0 and removed since WP 5.3.0.
+        * json_last_error_msg(): since WP 4.4.0 and removed since WP 5.3.0.
+        * JsonSerializable: since WP 4.4.0 and removed since WP 5.3.0.
         * array_replace_recursive(): since WP 4.5.3 up to 5.2.x. The polyfill was removed in WP 5.3.
-        * is_iterable(): since WP 4.9.6
+        * is_iterable(): since WP 4.9.6 and removed since WP 6.6.0.
         * is_countable(): since WP 4.9.6
-        * IMAGETYPE_WEBP and IMG_WEBP: since WP 5.8.0.
+        * IMAGETYPE_WEBP and IMG_WEBP: since WP 5.8.0 and removed since WP 6.6.0.
         * array_key_first(): since WP 5.9.0
         * array_key_last(): since WP 5.9.0
         * str_contains(): since WP 5.9.0
