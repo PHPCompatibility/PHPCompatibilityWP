@@ -35,3 +35,15 @@ $a = str_ends_with( $haystack, $needle );
 echo IMAGETYPE_WEBP, IMG_WEBP;
 
 if (array_is_list($array)) {}
+
+echo IMAGETYPE_AVIF, IMG_AVIF;
+
+$first_match = array_find( $array, $callback );
+$first_match_key = array_find_key( $array, $callback );
+if ( array_any( $array, $callback ) ) {}
+if ( array_all( $array, $callback ) ) {}
+
+$first_element = array_first( $array );
+$last_element = array_last( $array );
+
+echo IMAGETYPE_HEIF;

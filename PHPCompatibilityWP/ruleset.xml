@@ -36,6 +36,14 @@
         * str_starts_with(): since WP 5.9.0
         * str_ends_with(): since WP 5.9.0
         * array_is_list(): since WP 6.5.0
+        * IMAGETYPE_AVIF and IMG_AVIF: since WP 6.5.0
+        * array_find(): since WP 6.8.0
+        * array_find_key(): since WP 6.8.0
+        * array_any(): since WP 6.8.0
+        * array_all(): since WP 6.8.0
+        * array_first(): since WP 6.9.0
+        * array_last(): since WP 6.9.0
+        * IMAGETYPE_HEIF: since WP 6.9.0
         -->
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.hash_hmacFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.json_encodeFound"/>
@@ -55,6 +63,15 @@
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.str_starts_withFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.str_ends_withFound"/>
         <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_is_listFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.imagetype_avifFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.img_avifFound"/>
+        <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_findFound"/>
+        <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_find_keyFound"/>
+        <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_anyFound"/>
+        <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_allFound"/>
+        <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_firstFound"/>
+        <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_lastFound"/>
+        <exclude name="PHPCompatibility.Constants.NewConstants.imagetype_heifFound"/>
 
         <!--
         Contained in /wp-includes/spl-autoload-compat.php.
