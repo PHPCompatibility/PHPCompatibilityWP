@@ -78,8 +78,9 @@ The WordPress minimum PHP requirement was 5.2.4 up to WP 5.1.
 * As of WP 5.2, the new minimum PHP requirement is PHP 5.6.20.
 * As of WP 6.3, the new minimum PHP requirement is PHP 7.0.0.
 * As of WP 6.6, the new minimum PHP requirement is PHP 7.2.24.
+* As of WP 7.0, the new minimum PHP requirement is PHP 7.4.0.
 
-To enforce for PHPCompatibility to run against the PHP version you want to support, add `--runtime-set testVersion 7.2-` to your command-line command or add `<config name="testVersion" value="7.2-"/>` to your [custom ruleset](https://github.com/PHPCompatibility/PHPCompatibility#using-a-custom-ruleset), replacing `7.2-` with a `testVersion` of your choice.
+To enforce for PHPCompatibility to run against the PHP version you want to support, add `--runtime-set testVersion 7.4-` to your command-line command or add `<config name="testVersion" value="7.4-"/>` to your [custom ruleset](https://github.com/PHPCompatibility/PHPCompatibility#using-a-custom-ruleset), replacing `7.4-` with a `testVersion` of your choice.
 
 For example:
 ```bash
