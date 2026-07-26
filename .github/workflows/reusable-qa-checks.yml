@@ -70,6 +70,8 @@ jobs:
           php-version: ${{ matrix.php }}
           ini-values: error_reporting=E_ALL, display_errors=On, display_startup_errors=On
           coverage: none
+        env:
+          fail-fast: true
 
       - name: Conditionally update PHPCompatibility to develop version
         if: ${{ matrix.phpcompat != 'stable' }}
