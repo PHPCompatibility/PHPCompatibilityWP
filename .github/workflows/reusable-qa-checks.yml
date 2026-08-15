@@ -1,12 +1,16 @@
-name: CI
+name: QA checks
 
 on:
   workflow_call:
 
+# Permissions should be configured at the job level.
 permissions: {}
 
 jobs:
   xmllint:
+    permissions:
+      contents: read # To clone the repo.
+
     name: 'Check XML'
     runs-on: ubuntu-latest
 
@@ -41,8 +45,10 @@ jobs:
         run: diff -B ./PHPCompatibilityWP/ruleset.xml <(xmllint --format "./PHPCompatibilityWP/ruleset.xml")
 
   test:
+    permissions:
+      contents: read # To clone the repo.
+
     needs: xmllint
-    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -55,8 +61,10 @@ jobs:
             phpcompat: 'dev-develop as 10.99.99'
             experimental: true
 
-    name: "Test: PHP ${{ matrix.php }} - PHPCompat ${{ matrix.phpcompat }}"
     continue-on-error: ${{ matrix.experimental }}
+
+    name: "Test: PHP ${{ matrix.php }} - PHPCompat ${{ matrix.phpcompat }}"
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code

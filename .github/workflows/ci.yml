@@ -1,4 +1,4 @@
-name: CI
+name: QA PR
 
 on:
   # Run on pushes to `master` and on all pull requests.
@@ -9,8 +9,13 @@ on:
   # Allow manually triggering the workflow.
   workflow_dispatch:
 
+# Permissions should be configured at the job level.
 permissions: {}
 
 jobs:
   QA:
+    permissions:
+      contents: read # To clone the repo.
+
+    name: QA
     uses: ./.github/workflows/reusable-qa-checks.yml
