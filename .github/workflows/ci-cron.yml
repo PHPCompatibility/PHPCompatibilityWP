@@ -1,15 +1,20 @@
-name: CI Cronjob
+name: QA Cronjob
 
 on:
   # Run this workflow on day 15 of every month as the repo isn't that active.
   schedule:
     - cron: '0 0 15 * *'
 
+# Permissions should be configured at the job level.
 permissions: {}
 
 jobs:
   QA:
+    permissions:
+      contents: read # To clone the repo.
+
     # Don't run the cron job on forks.
     if: ${{ github.event.repository.fork == false }}
 
+    name: QA
     uses: ./.github/workflows/reusable-qa-checks.yml
