@@ -68,11 +68,11 @@ jobs:
 
     strategy:
       matrix:
-        php: ['5.4', 'latest']
+        php: ['7.2', 'latest']
         phpcompat: ['stable']
 
         include:
-          - php: '7.4'
+          - php: '8.2'
             phpcompat: 'dev-develop as 10.99.99'
 
     continue-on-error: ${{ matrix.phpcompat != 'stable' }}
@@ -113,5 +113,4 @@ jobs:
       - name: Test the ruleset
         run: >
           vendor/bin/phpcs -ps ./Test/WPTest.php --standard=PHPCompatibilityWP
-          --exclude=PHPCompatibility.Upgrade.LowPHP
           --runtime-set testVersion 5.2-

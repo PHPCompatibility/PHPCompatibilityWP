@@ -26,8 +26,8 @@ If you use PHPCompatibility, please fund this work by setting up a monthly contr
 
 ## Requirements
 
-* PHP > 5.4
-* [PHP_CodeSniffer] >= 3.13.3.
+* PHP > 7.2
+* [PHP_CodeSniffer] >= 4.0.2.
     Use the latest stable release of PHP_CodeSniffer for the best results.
 * [PHPCompatibility] 10.0.0+.
 * [PHPCompatibilityParagonie] 2.0.0+.
@@ -90,13 +90,6 @@ vendor/bin/phpcs -p . --standard=PHPCompatibilityWP --runtime-set testVersion 5.
 
 For more detailed information about setting the `testVersion`, see the README of the generic [PHPCompatibility][PHPCompatibility-testVersion] standard.
 
-
-### Testing PHP files only
-
-By default PHP_CodeSniffer < 4.0 will analyse PHP, JavaScript and CSS files. As the PHPCompatibility sniffs only target PHP code, you can make the run slightly faster by telling PHP_CodeSniffer to only check PHP files, like so:
-```bash
-vendor/bin/phpcs -p . --standard=PHPCompatibilityWP --extensions=php --runtime-set testVersion 5.6-
-```
 
 ## License
 

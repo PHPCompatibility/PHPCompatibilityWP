@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 This projects adheres to [Semantic Versioning](https://semver.org/) and [Keep a CHANGELOG](https://keepachangelog.com/).
 
+## [3.0.0-alpha3] - 2026-11-17
+
+* The documentation has been updated to align with the recently released [PHPCompatibility 10.0.0-alpha3] version.
+* Support for PHP < 7.2 has been (soft) dropped.
+* Support for PHP_CodeSniffer 3.x has been (soft) dropped.
+* Documentation update for WordPress 7.0. Thanks [@rodrigoprimo]!
+
+[10.0.0-alpha3]: https://github.com/PHPCompatibility/PHPCompatibility/releases/tag/10.0.0-alpha3
+
 ## [3.0.0-alpha2] - 2025-12-16
 
 * Ruleset: Updated for improved compatibility with WordPress 6.5 and for compatibility with WordPress 6.8 and 6.9. Thanks [@rodrigoprimo]!
@@ -94,6 +103,7 @@ Initial release of the PHPCompatibilityWP ruleset.
 
 [Composer PHPCS plugin]: https://github.com/PHPCSStandards/composer-installer/
 
+[3.0.0-alpha3]: https://github.com/PHPCompatibility/PHPCompatibilityWP/compare/3.0.0-alpha2...3.0.0-alpha3
 [3.0.0-alpha2]: https://github.com/PHPCompatibility/PHPCompatibilityWP/compare/3.0.0-alpha1...3.0.0-alpha2
 [3.0.0-alpha1]: https://github.com/PHPCompatibility/PHPCompatibilityWP/compare/2.1.8...3.0.0-alpha1
 [2.1.8]:        https://github.com/PHPCompatibility/PHPCompatibilityWP/compare/2.1.7...2.1.8
