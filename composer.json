@@ -1,32 +1,40 @@
 {
-  "name" : "phpcompatibility/phpcompatibility-wp",
-  "description" : "A ruleset for PHP_CodeSniffer to check for PHP cross-version compatibility issues in projects, while accounting for polyfills provided by WordPress.",
-  "type" : "phpcodesniffer-standard",
-  "keywords" : [ "compatibility", "phpcs", "standards", "static analysis", "wordpress" ],
-  "homepage" : "http://phpcompatibility.com/",
-  "license" : "LGPL-3.0-or-later",
-  "authors" : [ {
-    "name" : "Wim Godden",
-    "role" : "lead"
-  },
-  {
-    "name" : "Juliette Reinders Folmer",
-    "role" : "lead"
-  } ],
-  "support" : {
-    "issues" : "https://github.com/PHPCompatibility/PHPCompatibilityWP/issues",
-    "source" : "https://github.com/PHPCompatibility/PHPCompatibilityWP",
+  "name": "phpcompatibility/phpcompatibility-wp",
+  "description": "A ruleset for PHP_CodeSniffer to check for PHP cross-version compatibility issues in projects, while accounting for polyfills provided by WordPress.",
+  "license": "LGPL-3.0-or-later",
+  "type": "phpcodesniffer-standard",
+  "keywords": [
+    "compatibility",
+    "phpcs",
+    "standards",
+    "static analysis",
+    "wordpress"
+  ],
+  "authors": [
+    {
+      "name": "Wim Godden",
+      "role": "lead"
+    },
+    {
+      "name": "Juliette Reinders Folmer",
+      "role": "lead"
+    }
+  ],
+  "homepage": "http://phpcompatibility.com/",
+  "support": {
+    "issues": "https://github.com/PHPCompatibility/PHPCompatibilityWP/issues",
+    "source": "https://github.com/PHPCompatibility/PHPCompatibilityWP",
     "security": "https://github.com/PHPCompatibility/PHPCompatibilityWP/security/policy"
   },
+  "require": {
+    "phpcompatibility/php-compatibility": "^10.0@dev",
+    "phpcompatibility/phpcompatibility-paragonie": "^2.0@dev"
+  },
+  "prefer-stable": true,
   "config": {
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     },
     "lock": false
-  },
-  "require" : {
-    "phpcompatibility/php-compatibility" : "^10.0@dev",
-    "phpcompatibility/phpcompatibility-paragonie" : "^2.0@dev"
-  },
-  "prefer-stable" : true
+  }
 }
