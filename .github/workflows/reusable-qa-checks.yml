@@ -54,14 +54,12 @@ jobs:
       matrix:
         php: ['5.4', 'latest']
         phpcompat: ['stable']
-        experimental: [false]
 
         include:
           - php: '7.4'
             phpcompat: 'dev-develop as 10.99.99'
-            experimental: true
 
-    continue-on-error: ${{ matrix.experimental }}
+    continue-on-error: ${{ matrix.phpcompat != 'stable' }}
 
     name: "Test: PHP ${{ matrix.php }} - PHPCompat ${{ matrix.phpcompat }}"
     runs-on: ubuntu-latest
